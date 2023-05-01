@@ -28,12 +28,14 @@ img {
 
 section.secondary-content {
   display: flex;
+  justify-content: space-around;
   gap: 1.5em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 
 .info {
   font-size: 1.2rem;
+  max-width: 200px;
 }
 
 .info h1 {
@@ -61,11 +63,37 @@ section.primary-content {
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   font-size: 1.2rem;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   grid-column: span 2;
 }
 
 .primary-img {
   grid-column: span 2;
   height: 150px;
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    margin: 10em auto;
+  }
+
+  section.primary-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .primary-img {
+    grid-column: unset;
+    grid-row: 1/3;
+    height: 100%;
+  }
+
+  .primary-top {
+    grid-column: 2/4;
+    padding-left: 2em;
+  }
+
+  h1.title {
+    font-size: 10rem;
+    text-align: left;
+  }
 }
